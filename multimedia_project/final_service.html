@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التواصل معنا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .header {
+            background-color: #1a237e;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+        }
+        .logo {
+            width: 90px;
+        }
+        .header-links {
+            display: flex;
+            gap: 25px;
+        }
+        .header-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        .header-links a:hover {
+            background-color: #3949ab;
+        }
+        .about-section {
+            text-align: center;
+            padding: 40px;
+            background-color: white;
+            margin: 30px auto;
+            width: 80%;
+            border-radius: 10px;
+        }
+        .about-title {
+            color: #1a237e;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .about-image {
+            max-width: 600px;
+            width: 100%;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .about-section p {
+            color: #666;
+            font-size: 18px;
+        }
+        .contact-section {
+            background-color: white;
+            padding: 40px;
+            margin: 30px auto;
+            width: 70%;
+            border-radius: 10px;
+        }
+        .section-title {
+            color: #1a237e;
+            font-size: 26px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .form-label {
+            display: block;
+            margin: 15px 0 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 16px;
+        }
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #3949ab;
+        }
+        .form-textarea {
+            min-height: 120px;
+        }
+        .form-button {
+            background-color: #1a237e;
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 5px;
+            font-size: 18px;
+            width: 100%;
+        }
+        .form-button:hover {
+            background-color: #3949ab;
+        }
+        .company-info {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+        .info-title {
+            color: #1a237e;
+            font-size: 22px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .info-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .info-box {
+            text-align: center;
+            flex: 1;
+        }
+        .info-box h4 {
+            color: #3949ab;
+            margin-bottom: 10px;
+        }
+        .info-box p {
+            margin: 8px 0;
+            color: #555;
+            line-height: 1.8;
+        }
+        .social-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .social-links a {
+            color: #3949ab;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .social-links a:hover {
+            color: #1a237e;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <img class="logo" src="images/لوجو تصليح.png" alt="Logo">
+    <div class="header-links">
+        <a href="final_index.html">الصفحة الرئيسية</a>
+        <a href="final_service2.html">الخدمات</a>
+        <a href="final_service.html">التواصل معنا</a>
+    </div>
+</div>
+
+<div class="about-section">
+    <h2 class="about-title">تواصل معنا</h2>
+    <img src="images/36i.PNG" alt="Contact Us" class="about-image">
+    <p>نحن هنا لخدمتك! املأ الاستمارة وسنتواصل معك في أقرب وقت</p>
+</div>
+
+<div class="contact-section">
+    <h2 class="section-title">أرسل لنا رسالة</h2>
+    <form>
+        <label for="name" class="form-label">الاسم الكامل:</label>
+        <input type="text" id="name" class="form-input" required>
+
+        <label for="email" class="form-label">البريد الإلكتروني:</label>
+        <input type="email" id="email" class="form-input" placeholder="example@gmail.com" required>
+
+        <label for="phone" class="form-label">رقم الهاتف:</label>
+        <input type="tel" id="phone" class="form-input" required>
+
+        <label for="message" class="form-label">رسالتك:</label>
+        <textarea id="message" class="form-textarea" placeholder="اكتب استفسارك أو طلبك هنا..." required></textarea>
+
+        <button type="submit" class="form-button">إرسال الرسالة</button>
+    </form>
+
+    <div class="company-info">
+        <h3 class="info-title">معلومات التواصل</h3>
+        <div class="info-grid">
+            <div class="info-box">
+                <h4>📍 العنوان</h4>
+                <p>شارع النصر، مدينة نصر<br>القاهرة، مصر</p>
+            </div>
+            <div class="info-box">
+                <h4>📞 الهاتف</h4>
+                <p>+20 111 111 1111</p>
+                <p>+20 222 222 2222</p>
+            </div>
+            <div class="info-box">
+                <h4>📧 البريد الإلكتروني</h4>
+                <p>info@carservice.com</p>
+                <p>support@carservice.com</p>
+            </div>
+        </div>
+        <ul class="social-links">
+            <li><a href="#">فيسبوك</a></li>
+            <li><a href="#">إنستجرام</a></li>
+            <li><a href="#">واتساب</a></li>
+            <li><a href="#">تويتر</a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

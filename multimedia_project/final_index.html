@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز صيانة السيارات بالقاهرة</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .header {
+            background-color: #1a237e;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+        }
+        .logo {
+            width: 90px;
+        }
+        .header-links {
+            display: flex;
+            gap: 25px;
+        }
+        .header-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        .header-links a:hover {
+            background-color: #3949ab;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+            color: white;
+            padding: 60px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        .hero h3 {
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 25px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        .btn-primary {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .btn-primary:hover {
+            background-color: #ff5252;
+        }
+        .btn-success {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+        }
+        .hero-image {
+            width: 450px;
+            border-radius: 10px;
+        }
+        .info-section {
+            background-color: white;
+            padding: 50px;
+            margin: 30px;
+            border-radius: 10px;
+        }
+        .info-section h2 {
+            color: #1a237e;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+        .info-section p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .info-with-image {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .info-text {
+            flex: 1;
+        }
+        .info-text h3 {
+            color: #1a237e;
+            margin-bottom: 15px;
+        }
+        .info-image {
+            flex: 1;
+            text-align: center;
+        }
+        .info-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+        .values-title {
+            text-align: center;
+            color: #1a237e;
+            font-size: 28px;
+            margin: 40px 0 30px;
+        }
+        .values-section {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px 50px;
+            flex-wrap: wrap;
+        }
+        .value-box {
+            text-align: center;
+            width: 220px;
+        }
+        .value-box img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+        .value-box h3 {
+            color: #3949ab;
+            margin-bottom: 10px;
+        }
+        .value-box p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .services-overview {
+            background-color: white;
+            padding: 50px;
+            margin: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .services-overview h2 {
+            color: #1a237e;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        .services-overview p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+        .services-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        .service-card {
+            background-color: #f5f5f5;
+            border: 2px solid #e0e0e0;
+            padding: 25px;
+            border-radius: 10px;
+            width: 200px;
+        }
+        .service-card h3 {
+            color: #3949ab;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .service-card p {
+            color: #666;
+            font-size: 14px;
+        }
+        .view-all-btn {
+            background-color: #3949ab;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .view-all-btn:hover {
+            background-color: #1a237e;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px;
+            background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+            color: white;
+        }
+        .stat-box {
+            text-align: center;
+        }
+        .stat-box h3 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .schedule {
+            padding: 50px;
+            margin: 30px;
+        }
+        .schedule h2 {
+            text-align: center;
+            color: #1a237e;
+            margin-bottom: 25px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        table th {
+            background-color: #1a237e;
+            color: white;
+            padding: 15px;
+        }
+        table td {
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        table tr:last-child td {
+            background-color: #ffcdd2;
+            color: #c62828;
+        }
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .footer-columns {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 30px;
+        }
+        .footer-col h3 {
+            margin-bottom: 15px;
+        }
+        .footer-col p {
+            margin: 8px 0;
+        }
+        .footer-images {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
+            background-color: #2a2a2a;
+            padding: 30px;
+        }
+        .img-box {
+            text-align: center;
+            width: 260px;
+        }
+        .img-box img {
+            width: 100%;
+            height: 180px;
+            border-radius: 8px;
+        }
+        .img-box p {
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+        .social-links {
+            margin: 20px 0;
+        }
+        .social-links a {
+            color: white;
+            margin: 0 15px;
+            font-size: 30px;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            color: #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <img class="logo" src="images/لوجو تصليح.png" alt="Logo">
+    <div class="header-links">
+        <a href="final_index.html">الصفحة الرئيسية</a>
+        <a href="final_service2.html">الخدمات</a>
+        <a href="final_service.html">التواصل معنا</a>
+    </div>
+</div>
+
+<div class="hero">
+    <div>
+        <h1>مركز صيانة السيارات بالقاهرة</h1>
+        <h3>مراكز صيانة وإصلاح السيارات متخصصين بكفاءة التوكيل</h3>
+        <div class="hero-buttons">
+            <a href="final_service2.html" class="btn-primary">تصفح خدماتنا</a>
+            <button class="btn-success">01034659634</button>
+        </div>
+    </div>
+    <div>
+        <img class="hero-image" src="images/إصلاح السيارات.PNG" alt="Car Repair">
+    </div>
+</div>
+
+<div class="info-section">
+    <h2>لماذا يمكنكم الاعتماد علينا في مراكز صيانة السيارات؟</h2>
+    <p>نحن نقدم لكل مالك سيارة الخدمات الأفضل بأعلى معايير الجودة حيث يمكنكم تقديم أقوى الفحوصات الهندسية بأيدي فنيين ومهندسين متخصصين في جميع أنواع السيارات. نحن في مركز صيانة السيارات نعتمد على أحدث المعدات والأجهزة لفحص الأعطال وإصلاحها بدقة، مع استخدام قطع الغيار الأصلية.</p>
+    <div class="info-with-image">
+        <div class="info-text">
+            <h3>كيف نقدم خدمة إصلاح السيارات في الوقت المناسب وبأعلى كفاءة؟</h3>
+            <p>في مراكز صيانة السيارات، نحرص على تنفيذ أعمال الصيانة وفق مواعيد محددة لضمان توفير الوقت والجهد على العملاء. نمتلك فريقًا من المهندسين ذوي الخبرة العالية الذين يستخدمون أدوات متطورة لتشخيص الأعطال وإصلاحها بسرعة وفعالية.</p>
+        </div>
+        <div class="info-image">
+            <img src="images/imag.PNG" alt="Car Service">
+        </div>
+    </div>
+</div>
+
+<h2 class="values-title">القيم التي نعمل عليها</h2>
+<div class="values-section">
+    <div class="value-box">
+        <img src="images/photo1.PNG" alt="Innovation">
+        <h3>التحديث والتطوير</h3>
+        <p>السعي الدائم لتحديث خدماتنا وفريق العمل لتقديم أفضل تجربة.</p>
+    </div>
+    <div class="value-box">
+        <img src="images/photo2.PNG" alt="Efficiency">
+        <h3>الكفاءة والاستجابة</h3>
+        <p>نسعى لإتمام الخدمات بسرعة وكفاءة عالية لتلبية احتياجات العملاء بفعالية.</p>
+    </div>
+    <div class="value-box">
+        <img src="images/photo3.PNG" alt="Trust">
+        <h3>الموثوقية</h3>
+        <p>نحرص على تقديم خدمات تقوم على الشفافية والأمانة في كل تعامل.</p>
+    </div>
+    <div class="value-box">
+        <img src="images/photo 4.PNG" alt="Quality">
+        <h3>الجودة الشاملة</h3>
+        <p>نقدم خدمات مدروسة تتوافق مع المعايير العالية في كل عملية صيانة.</p>
+    </div>
+</div>
+
+<div class="services-overview">
+    <h2>خدماتنا المميزة</h2>
+    <p>نقدم مجموعة شاملة من خدمات الصيانة والإصلاح بأعلى معايير الجودة</p>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>🔧</h3>
+            <h3>صيانة المحرك</h3>
+            <p>فحص وإصلاح شامل</p>
+        </div>
+        <div class="service-card">
+            <h3>⚡</h3>
+            <h3>الكهرباء</h3>
+            <p>تصليح الأنوار والدوائر</p>
+        </div>
+        <div class="service-card">
+            <h3>🛞</h3>
+            <h3>الفرامل والإطارات</h3>
+            <p>سلامة وأمان تام</p>
+        </div>
+        <div class="service-card">
+            <h3>❄️</h3>
+            <h3>التكييف والتبريد</h3>
+            <p>راحة في كل الأوقات</p>
+        </div>
+    </div>
+    <a href="final_service2.html" class="view-all-btn">شاهد جميع الخدمات ←</a>
+</div>
+
+<div class="stats">
+    <div class="stat-box">
+        <h3>53,000+</h3>
+        <p>عميل تعامل معنا</p>
+    </div>
+    <div class="stat-box">
+        <h3>85,000+</h3>
+        <p>سيارة تم تصليحها</p>
+    </div>
+    <div class="stat-box">
+        <h3>95%</h3>
+        <p>معدل تقييم العملاء</p>
+    </div>
+</div>
+
+<div class="schedule">
+    <h2>جدول مواعيد العمل الأسبوعي</h2>
+    <table>
+        <tr>
+            <th>اليوم</th>
+            <th>الفترة الصباحية</th>
+            <th>الفترة المسائية</th>
+            <th>ملاحظات</th>
+        </tr>
+        <tr>
+            <td>السبت</td>
+            <td>9:00 ص – 1:00 م</td>
+            <td>2:00 م – 7:00 م</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>الأحد</td>
+            <td>9:00 ص – 1:00 م</td>
+            <td>2:00 م – 7:00 م</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>الإثنين</td>
+            <td>9:00 ص – 1:00 م</td>
+            <td>2:00 م – 7:00 م</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>الثلاثاء</td>
+            <td>9:00 ص – 1:00 م</td>
+            <td>2:00 م – 7:00 م</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>الأربعاء</td>
+            <td>9:00 ص – 1:00 م</td>
+            <td>2:00 م – 7:00 م</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>الخميس</td>
+            <td>9:00 ص – 1:00 م</td>
+            <td>2:00 م – 7:00 م</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>الجمعة</td>
+            <td colspan="2">مغلق</td>
+            <td>للراحة أو الصيانة</td>
+        </tr>
+    </table>
+</div>
+
+<footer>
+    <div class="footer-columns">
+        <div class="footer-col">
+            <h3>خدمات السيارات</h3>
+            <p>تغيير زيت</p>
+            <p>كشف الأعطال</p>
+            <p>صيانة دورية</p>
+        </div>
+        <div class="footer-col">
+            <h3>الدعم والمساعدة</h3>
+            <p><a href="final_service.html" style="color: white; text-decoration: none;">اتصل بنا</a></p>
+            <p>الأسئلة الشائعة</p>
+            <p>مواعيد العمل</p>
+        </div>
+        <div class="footer-col">
+            <h3>معلومات عنا</h3>
+            <p>من نحن</p>
+            <p>سياسة الخصوصية</p>
+            <p>الشروط والأحكام</p>
+        </div>
+    </div>
+    <div class="footer-images">
+        <div class="img-box">
+            <img src="images/Capture.PNG3.PNG" alt="Service 1">
+            <p>خدمات السيارات كثيرة، نحن نعمل على جمع جميع خدمات السيارات في موقعنا.</p>
+        </div>
+        <div class="img-box">
+            <img src="images/Capture.PNG" alt="Service 2">
+            <p>هتشتري عربية وعايز مركز متكامل فحص وكشف على السيارة؟ هنا هتشتري وانت مطمن.</p>
+        </div>
+        <div class="img-box">
+            <img src="images/Capture.PNG1.PNG" alt="Service 3">
+            <p>تسهيل مركز صيانة السيارات المتخصص في نوع عربيتك، بثقة التوكيل.</p>
+        </div>
+    </div>
+    <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>جميع الحقوق محفوظة © 2025</p>
+</footer>
+
+</body>
+</html>
